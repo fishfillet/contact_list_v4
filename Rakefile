@@ -20,3 +20,10 @@ desc 'Retrieves the current schema version number'
 task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
+
+desc 'Populate'
+task "db:populate" do
+  Contact.create(firstname: "Daniel", lastname: "Susetyo", phone: "6047152878", email: "daniel@daniel.com" )
+  Contact.create(firstname: "Ben", lastname: "Tem", phone: "6047152878", email: "ben@ben.com" )  
+  Contact.create(firstname: "Ben", lastname: "Daniel", phone: "6047152878", email: "ben@ben.com" )  
+end
