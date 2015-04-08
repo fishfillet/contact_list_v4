@@ -1,32 +1,33 @@
-
 <div class="container">
 <h1>Contact List v4.0.0</h1>
+</div>
+
+<div class="container">
 <h3>Search for a cotact</h3>
 <input type="text" name="search" id="search-input" placeholder="Who are you looking for?">
 <button id="go-search">Search</button>
+
+<h3>or list all</h3>
+<button id="list-all">List All</button>
 </div>
 
-<div class="container">
-  <button id="list-all">List All</button>
-</div>
 
 <div class="container">
   <h3>Create a contact</h3>
-  <form>
-  First name:<br>
-  <input type="text" name="firstname">
+  <form id="new-contact">
+  <input id="firstname" type="text" name="firstname" placeholder="first name">
   <br>
-  Last name:<br>
-  <input type="text" name="lastname">
+  <input id="lastname" type="text" name="lastname" placeholder="last name">
   <br>
-  Phone number:<br>
-  <input type="text" name="phone">
+  <input id="phone-number" type="text" name="phone" placeholder="phone number">
   <br>
-  Email:<br>
-  <input type="text" name="email">
+  <input id="email" type="text" name="email" placeholder="email">
   <br>
   <button id="create-contact">Create</button>
   </form>
 </div>
 
-<div id="contact-info"></div>
+<div class="container">
+  <h3>Contacts</h3>
+  <div id="contact-info"></div>
+</div>

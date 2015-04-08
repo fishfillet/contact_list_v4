@@ -20,3 +20,16 @@ get '/list' do
   @contacts.to_json  
 end
 
+post '/new' do
+  content_type :json
+
+  @firstname = params[:firstname]
+  @lastname = params[:lastname]
+  @phone = params[:phone]
+  @email = params[:email]
+
+  @contacts = Contact.new(:firstname => @firstname, :lastname => @lastname, :phone => @phone, :email => @email)
+  @contacts.save
+  @contacts.to_json
+end
+

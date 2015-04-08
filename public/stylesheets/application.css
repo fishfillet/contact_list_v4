@@ -1,7 +1,7 @@
 html{
   height: 100%;
   font-size: 1rem;
-  background-color: yellow;
+  background-color: #F7FB48;
   font-family: futura-pt,futura-heavy,"Helvetica Neue",
   Helvetica,Arial,sans-serif;
 }
@@ -12,6 +12,8 @@ body{
   height: 100%;
   width: 100%;
 }
+
+
 
 *,
 *:after,
@@ -25,6 +27,18 @@ body{
 }
 
 .container{
-  margin: 2%;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+}
+
+.container input{
+  margin-bottom: 2px ;
+}
+
+#contact-info h3{
+  background-color:rgba(255,0,0,0.5);
   padding: 10px;
 }
+
+
