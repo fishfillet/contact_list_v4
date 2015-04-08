@@ -12,3 +12,11 @@ get '/search' do
   @contacts.to_json
   # json @contacts
 end
+
+get '/list' do
+  content_type :json
+
+  @contacts = Contact.all
+  @contacts.to_json  
+end
+
