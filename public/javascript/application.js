@@ -6,9 +6,10 @@ $(document).ready(function() {
     var data = {search: input};
 
   $.ajax({
-    url: '/search',
+    url: '/contacts/search',
     method: 'GET',
-    data: data
+    data: data,
+    dataType: 'json'
     }).done(function(contacts){
       $('#contact-info').empty();
         $.each(contacts, function(index, value){
@@ -21,8 +22,9 @@ $(document).ready(function() {
 // start of list all function
   $('#list-all').on('click', function(){
     $.ajax({
-      url: '/list',
-      method: 'GET'
+      url: '/contacts/list',
+      method: 'GET',
+      dataType: 'json'
     }).done(function(contacts){
         $('#contact-info').empty();
         $.each(contacts, function(index, value){
@@ -33,7 +35,7 @@ $(document).ready(function() {
 //  end of list all function
 
 // start of create contact
-  $('#create-contact').on('click', function(){
+  $('#new-contact').on('submit', function(){
     var first_name = $('#firstname').val();
     var last_name = $('#lastname').val();
     var phone_number = $('#phone-number').val();
@@ -45,11 +47,12 @@ $(document).ready(function() {
                       email: email_address };
 
     $.ajax({
-      url: '/new',
+      url: '/contacts/new',
       method: 'POST',
       data: postParams
     }).done(function(contacts){
-        alert("You added: " + contacts)
+        console.log(contacts);
+        alert("You added: " + contacts.firstname);
     });
   });
 // end of create contact

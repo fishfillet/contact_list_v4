@@ -4,7 +4,7 @@ get '/' do
   erb :index
 end
 
-get '/search' do
+get '/contacts/search' do
   content_type :json
 
   @contacts = Contact.all
@@ -13,14 +13,14 @@ get '/search' do
   # json @contacts
 end
 
-get '/list' do
+get '/contacts/list' do
   content_type :json
 
   @contacts = Contact.all
   @contacts.to_json  
 end
 
-post '/new' do
+post '/contacts/new' do
   content_type :json
 
   @firstname = params[:firstname]
